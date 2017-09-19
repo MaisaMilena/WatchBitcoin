@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42305F81AE6EF1C1DB2E71D5 /* Pods_AulaComplication_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176CDE31FB72F742E69C2BBA /* Pods_AulaComplication_WatchKit_Extension.framework */; };
+		591A21D145D30795F8DF3EDF /* Pods_AulaComplication_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC61ECD5BC216DA11EC5971A /* Pods_AulaComplication_WatchKit_App.framework */; };
+		9626D6C274CBA8778F41B1A6 /* Pods_AulaComplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3A4F69615666121B40F7BA /* Pods_AulaComplication.framework */; };
+		C2CC72A11F718DEC00BE590C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72A01F718DEC00BE590C /* AppDelegate.swift */; };
+		C2CC72A31F718DEC00BE590C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72A21F718DEC00BE590C /* ViewController.swift */; };
+		C2CC72A61F718DEC00BE590C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CC72A41F718DEC00BE590C /* Main.storyboard */; };
+		C2CC72A81F718DEC00BE590C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CC72A71F718DEC00BE590C /* Assets.xcassets */; };
+		C2CC72AB1F718DEC00BE590C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CC72A91F718DEC00BE590C /* LaunchScreen.storyboard */; };
+		C2CC72B01F718DEC00BE590C /* AulaComplication WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C2CC72AF1F718DEC00BE590C /* AulaComplication WatchKit App.app */; };
+		C2CC72B61F718DEC00BE590C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CC72B41F718DEC00BE590C /* Interface.storyboard */; };
+		C2CC72B81F718DEC00BE590C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CC72B71F718DEC00BE590C /* Assets.xcassets */; };
+		C2CC72BF1F718DEC00BE590C /* AulaComplication WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C2CC72BE1F718DEC00BE590C /* AulaComplication WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C2CC72C41F718DEC00BE590C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72C31F718DEC00BE590C /* InterfaceController.swift */; };
+		C2CC72C61F718DEC00BE590C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72C51F718DEC00BE590C /* ExtensionDelegate.swift */; };
+		C2CC72C81F718DEC00BE590C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72C71F718DEC00BE590C /* ComplicationController.swift */; };
+		C2CC72CA1F718DEC00BE590C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CC72C91F718DEC00BE590C /* Assets.xcassets */; };
+		C2CC72DB1F71956000BE590C /* FormataData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72DA1F71956000BE590C /* FormataData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2CC72B11F718DEC00BE590C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2CC72951F718DEB00BE590C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2CC72AE1F718DEC00BE590C;
+			remoteInfo = "AulaComplication WatchKit App";
+		};
+		C2CC72C01F718DEC00BE590C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2CC72951F718DEB00BE590C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2CC72BD1F718DEC00BE590C;
+			remoteInfo = "AulaComplication WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2CC72D11F718DEC00BE590C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C2CC72BF1F718DEC00BE590C /* AulaComplication WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CC72D51F718DEC00BE590C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C2CC72B01F718DEC00BE590C /* AulaComplication WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1135F34D089F8A8CDFCCC39F /* Pods-AulaComplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication/Pods-AulaComplication.debug.xcconfig"; sourceTree = "<group>"; };
+		176CDE31FB72F742E69C2BBA /* Pods_AulaComplication_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AulaComplication_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70F2B176E4B1B19D257D13F7 /* Pods-AulaComplication WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication WatchKit App/Pods-AulaComplication WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		7B3A4F69615666121B40F7BA /* Pods_AulaComplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AulaComplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD0AB30B2E6C0C4A16CBE75 /* Pods-AulaComplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication/Pods-AulaComplication.release.xcconfig"; sourceTree = "<group>"; };
+		C2CC729D1F718DEC00BE590C /* AulaComplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AulaComplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CC72A01F718DEC00BE590C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2CC72A21F718DEC00BE590C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2CC72A51F718DEC00BE590C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2CC72A71F718DEC00BE590C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2CC72AA1F718DEC00BE590C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2CC72AC1F718DEC00BE590C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CC72AF1F718DEC00BE590C /* AulaComplication WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AulaComplication WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CC72B51F718DEC00BE590C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C2CC72B71F718DEC00BE590C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2CC72B91F718DEC00BE590C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CC72BE1F718DEC00BE590C /* AulaComplication WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AulaComplication WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CC72C31F718DEC00BE590C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C2CC72C51F718DEC00BE590C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C2CC72C71F718DEC00BE590C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C2CC72C91F718DEC00BE590C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2CC72CB1F718DEC00BE590C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CC72DA1F71956000BE590C /* FormataData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormataData.swift; sourceTree = "<group>"; };
+		C2CD6B9F468AF89895AB4EB1 /* Pods-AulaComplication WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication WatchKit App/Pods-AulaComplication WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		C50DB2F799E6D04163A34825 /* Pods-AulaComplication WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication WatchKit Extension/Pods-AulaComplication WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		CC61ECD5BC216DA11EC5971A /* Pods_AulaComplication_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AulaComplication_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7B15C1BBB073FA17B953A3 /* Pods-AulaComplication WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication WatchKit Extension/Pods-AulaComplication WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BDB475841FAC234A7AC62A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				591A21D145D30795F8DF3EDF /* Pods_AulaComplication_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CC729A1F718DEB00BE590C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9626D6C274CBA8778F41B1A6 /* Pods_AulaComplication.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CC72BB1F718DEC00BE590C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42305F81AE6EF1C1DB2E71D5 /* Pods_AulaComplication_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21F7A7BB7ACAE373A0A6D32B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1135F34D089F8A8CDFCCC39F /* Pods-AulaComplication.debug.xcconfig */,
+				8AD0AB30B2E6C0C4A16CBE75 /* Pods-AulaComplication.release.xcconfig */,
+				70F2B176E4B1B19D257D13F7 /* Pods-AulaComplication WatchKit App.debug.xcconfig */,
+				C2CD6B9F468AF89895AB4EB1 /* Pods-AulaComplication WatchKit App.release.xcconfig */,
+				DE7B15C1BBB073FA17B953A3 /* Pods-AulaComplication WatchKit Extension.debug.xcconfig */,
+				C50DB2F799E6D04163A34825 /* Pods-AulaComplication WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9556A41D838BB2C084B8CA47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B3A4F69615666121B40F7BA /* Pods_AulaComplication.framework */,
+				CC61ECD5BC216DA11EC5971A /* Pods_AulaComplication_WatchKit_App.framework */,
+				176CDE31FB72F742E69C2BBA /* Pods_AulaComplication_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2CC72941F718DEB00BE590C = {
+			isa = PBXGroup;
+			children = (
+				C2CC729F1F718DEC00BE590C /* AulaComplication */,
+				C2CC72B31F718DEC00BE590C /* AulaComplication WatchKit App */,
+				C2CC72C21F718DEC00BE590C /* AulaComplication WatchKit Extension */,
+				C2CC729E1F718DEC00BE590C /* Products */,
+				21F7A7BB7ACAE373A0A6D32B /* Pods */,
+				9556A41D838BB2C084B8CA47 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2CC729E1F718DEC00BE590C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2CC729D1F718DEC00BE590C /* AulaComplication.app */,
+				C2CC72AF1F718DEC00BE590C /* AulaComplication WatchKit App.app */,
+				C2CC72BE1F718DEC00BE590C /* AulaComplication WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2CC729F1F718DEC00BE590C /* AulaComplication */ = {
+			isa = PBXGroup;
+			children = (
+				C2CC72A01F718DEC00BE590C /* AppDelegate.swift */,
+				C2CC72A21F718DEC00BE590C /* ViewController.swift */,
+				C2CC72A41F718DEC00BE590C /* Main.storyboard */,
+				C2CC72A71F718DEC00BE590C /* Assets.xcassets */,
+				C2CC72A91F718DEC00BE590C /* LaunchScreen.storyboard */,
+				C2CC72AC1F718DEC00BE590C /* Info.plist */,
+			);
+			path = AulaComplication;
+			sourceTree = "<group>";
+		};
+		C2CC72B31F718DEC00BE590C /* AulaComplication WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C2CC72B41F718DEC00BE590C /* Interface.storyboard */,
+				C2CC72B71F718DEC00BE590C /* Assets.xcassets */,
+				C2CC72B91F718DEC00BE590C /* Info.plist */,
+			);
+			path = "AulaComplication WatchKit App";
+			sourceTree = "<group>";
+		};
+		C2CC72C21F718DEC00BE590C /* AulaComplication WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C2CC72D91F71952600BE590C /* Comum */,
+				C2CC72C31F718DEC00BE590C /* InterfaceController.swift */,
+				C2CC72C51F718DEC00BE590C /* ExtensionDelegate.swift */,
+				C2CC72C71F718DEC00BE590C /* ComplicationController.swift */,
+				C2CC72C91F718DEC00BE590C /* Assets.xcassets */,
+				C2CC72CB1F718DEC00BE590C /* Info.plist */,
+			);
+			path = "AulaComplication WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C2CC72D91F71952600BE590C /* Comum */ = {
+			isa = PBXGroup;
+			children = (
+				C2CC72DA1F71956000BE590C /* FormataData.swift */,
+			);
+			name = Comum;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2CC729C1F718DEB00BE590C /* AulaComplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2CC72D61F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication" */;
+			buildPhases = (
+				F6FA29835CFB8B571BE84273 /* [CP] Check Pods Manifest.lock */,
+				C2CC72991F718DEB00BE590C /* Sources */,
+				C2CC729A1F718DEB00BE590C /* Frameworks */,
+				C2CC729B1F718DEB00BE590C /* Resources */,
+				C2CC72D51F718DEC00BE590C /* Embed Watch Content */,
+				BBAC4271CFDBB1198955DE4D /* [CP] Embed Pods Frameworks */,
+				AD4F333AA983DE9C7D51AADB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2CC72B21F718DEC00BE590C /* PBXTargetDependency */,
+			);
+			name = AulaComplication;
+			productName = AulaComplication;
+			productReference = C2CC729D1F718DEC00BE590C /* AulaComplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2CC72AE1F718DEC00BE590C /* AulaComplication WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2CC72D21F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication WatchKit App" */;
+			buildPhases = (
+				27378F1B207BEC530D1BF976 /* [CP] Check Pods Manifest.lock */,
+				C2CC72AD1F718DEC00BE590C /* Resources */,
+				C2CC72D11F718DEC00BE590C /* Embed App Extensions */,
+				2BDB475841FAC234A7AC62A8 /* Frameworks */,
+				113372B014D9E161E4A829EB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2CC72C11F718DEC00BE590C /* PBXTargetDependency */,
+			);
+			name = "AulaComplication WatchKit App";
+			productName = "AulaComplication WatchKit App";
+			productReference = C2CC72AF1F718DEC00BE590C /* AulaComplication WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C2CC72BD1F718DEC00BE590C /* AulaComplication WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2CC72CE1F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication WatchKit Extension" */;
+			buildPhases = (
+				CA5D1E7B977307B8D2E99E41 /* [CP] Check Pods Manifest.lock */,
+				C2CC72BA1F718DEC00BE590C /* Sources */,
+				C2CC72BB1F718DEC00BE590C /* Frameworks */,
+				C2CC72BC1F718DEC00BE590C /* Resources */,
+				74BD76D5B99ED9493ECB3F08 /* [CP] Embed Pods Frameworks */,
+				66B59A19740A78786FD037A3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AulaComplication WatchKit Extension";
+			productName = "AulaComplication WatchKit Extension";
+			productReference = C2CC72BE1F718DEC00BE590C /* AulaComplication WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2CC72951F718DEB00BE590C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = BEPiD;
+				TargetAttributes = {
+					C2CC729C1F718DEB00BE590C = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = B33RKQE9R2;
+						ProvisioningStyle = Automatic;
+					};
+					C2CC72AE1F718DEC00BE590C = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = B33RKQE9R2;
+						ProvisioningStyle = Automatic;
+					};
+					C2CC72BD1F718DEC00BE590C = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = B33RKQE9R2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C2CC72981F718DEB00BE590C /* Build configuration list for PBXProject "AulaComplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2CC72941F718DEB00BE590C;
+			productRefGroup = C2CC729E1F718DEC00BE590C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2CC729C1F718DEB00BE590C /* AulaComplication */,
+				C2CC72AE1F718DEC00BE590C /* AulaComplication WatchKit App */,
+				C2CC72BD1F718DEC00BE590C /* AulaComplication WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2CC729B1F718DEB00BE590C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CC72AB1F718DEC00BE590C /* LaunchScreen.storyboard in Resources */,
+				C2CC72A81F718DEC00BE590C /* Assets.xcassets in Resources */,
+				C2CC72A61F718DEC00BE590C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CC72AD1F718DEC00BE590C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CC72B81F718DEC00BE590C /* Assets.xcassets in Resources */,
+				C2CC72B61F718DEC00BE590C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CC72BC1F718DEC00BE590C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CC72CA1F718DEC00BE590C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		113372B014D9E161E4A829EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AulaComplication WatchKit App/Pods-AulaComplication WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27378F1B207BEC530D1BF976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66B59A19740A78786FD037A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AulaComplication WatchKit Extension/Pods-AulaComplication WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74BD76D5B99ED9493ECB3F08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AulaComplication WatchKit Extension/Pods-AulaComplication WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD4F333AA983DE9C7D51AADB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AulaComplication/Pods-AulaComplication-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBAC4271CFDBB1198955DE4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AulaComplication/Pods-AulaComplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA5D1E7B977307B8D2E99E41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6FA29835CFB8B571BE84273 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2CC72991F718DEB00BE590C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CC72A31F718DEC00BE590C /* ViewController.swift in Sources */,
+				C2CC72A11F718DEC00BE590C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CC72BA1F718DEC00BE590C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CC72DB1F71956000BE590C /* FormataData.swift in Sources */,
+				C2CC72C61F718DEC00BE590C /* ExtensionDelegate.swift in Sources */,
+				C2CC72C41F718DEC00BE590C /* InterfaceController.swift in Sources */,
+				C2CC72C81F718DEC00BE590C /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2CC72B21F718DEC00BE590C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2CC72AE1F718DEC00BE590C /* AulaComplication WatchKit App */;
+			targetProxy = C2CC72B11F718DEC00BE590C /* PBXContainerItemProxy */;
+		};
+		C2CC72C11F718DEC00BE590C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2CC72BD1F718DEC00BE590C /* AulaComplication WatchKit Extension */;
+			targetProxy = C2CC72C01F718DEC00BE590C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2CC72A41F718DEC00BE590C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2CC72A51F718DEC00BE590C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C2CC72A91F718DEC00BE590C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2CC72AA1F718DEC00BE590C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C2CC72B41F718DEC00BE590C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2CC72B51F718DEC00BE590C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2CC72CC1F718DEC00BE590C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2CC72CD1F718DEC00BE590C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2CC72CF1F718DEC00BE590C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE7B15C1BBB073FA17B953A3 /* Pods-AulaComplication WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = B33RKQE9R2;
+				INFOPLIST_FILE = "AulaComplication WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.AulaComplication.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		C2CC72D01F718DEC00BE590C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50DB2F799E6D04163A34825 /* Pods-AulaComplication WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = B33RKQE9R2;
+				INFOPLIST_FILE = "AulaComplication WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.AulaComplication.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		C2CC72D31F718DEC00BE590C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70F2B176E4B1B19D257D13F7 /* Pods-AulaComplication WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B33RKQE9R2;
+				IBSC_MODULE = AulaComplication_WatchKit_Extension;
+				INFOPLIST_FILE = "AulaComplication WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.AulaComplication.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		C2CC72D41F718DEC00BE590C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CD6B9F468AF89895AB4EB1 /* Pods-AulaComplication WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B33RKQE9R2;
+				IBSC_MODULE = AulaComplication_WatchKit_Extension;
+				INFOPLIST_FILE = "AulaComplication WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.AulaComplication.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		C2CC72D71F718DEC00BE590C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1135F34D089F8A8CDFCCC39F /* Pods-AulaComplication.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B33RKQE9R2;
+				INFOPLIST_FILE = AulaComplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.AulaComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C2CC72D81F718DEC00BE590C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD0AB30B2E6C0C4A16CBE75 /* Pods-AulaComplication.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B33RKQE9R2;
+				INFOPLIST_FILE = AulaComplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.AulaComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2CC72981F718DEB00BE590C /* Build configuration list for PBXProject "AulaComplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CC72CC1F718DEC00BE590C /* Debug */,
+				C2CC72CD1F718DEC00BE590C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2CC72CE1F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CC72CF1F718DEC00BE590C /* Debug */,
+				C2CC72D01F718DEC00BE590C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C2CC72D21F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CC72D31F718DEC00BE590C /* Debug */,
+				C2CC72D41F718DEC00BE590C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C2CC72D61F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CC72D71F718DEC00BE590C /* Debug */,
+				C2CC72D81F718DEC00BE590C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2CC72951F718DEB00BE590C /* Project object */;
+}
