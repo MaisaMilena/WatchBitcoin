@@ -24,6 +24,8 @@
 		C2CC72C81F718DEC00BE590C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72C71F718DEC00BE590C /* ComplicationController.swift */; };
 		C2CC72CA1F718DEC00BE590C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CC72C91F718DEC00BE590C /* Assets.xcassets */; };
 		C2CC72DB1F71956000BE590C /* FormataData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72DA1F71956000BE590C /* FormataData.swift */; };
+		C2CC72DE1F71AF7400BE590C /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72DD1F71AF7400BE590C /* JsonLoader.swift */; };
+		C2CC72E01F71B25C00BE590C /* LoaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC72DF1F71B25C00BE590C /* LoaderPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		C2CC72C91F718DEC00BE590C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2CC72CB1F718DEC00BE590C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CC72DA1F71956000BE590C /* FormataData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormataData.swift; sourceTree = "<group>"; };
+		C2CC72DD1F71AF7400BE590C /* JsonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		C2CC72DF1F71B25C00BE590C /* LoaderPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderPresenter.swift; sourceTree = "<group>"; };
 		C2CD6B9F468AF89895AB4EB1 /* Pods-AulaComplication WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication WatchKit App/Pods-AulaComplication WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		C50DB2F799E6D04163A34825 /* Pods-AulaComplication WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AulaComplication WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AulaComplication WatchKit Extension/Pods-AulaComplication WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		CC61ECD5BC216DA11EC5971A /* Pods_AulaComplication_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AulaComplication_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +201,7 @@
 		C2CC72C21F718DEC00BE590C /* AulaComplication WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C2CC72DC1F71AF5700BE590C /* Consumo dados */,
 				C2CC72D91F71952600BE590C /* Comum */,
 				C2CC72C31F718DEC00BE590C /* InterfaceController.swift */,
 				C2CC72C51F718DEC00BE590C /* ExtensionDelegate.swift */,
@@ -213,6 +218,15 @@
 				C2CC72DA1F71956000BE590C /* FormataData.swift */,
 			);
 			name = Comum;
+			sourceTree = "<group>";
+		};
+		C2CC72DC1F71AF5700BE590C /* Consumo dados */ = {
+			isa = PBXGroup;
+			children = (
+				C2CC72DD1F71AF7400BE590C /* JsonLoader.swift */,
+				C2CC72DF1F71B25C00BE590C /* LoaderPresenter.swift */,
+			);
+			name = "Consumo dados";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,9 +509,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2CC72DB1F71956000BE590C /* FormataData.swift in Sources */,
+				C2CC72E01F71B25C00BE590C /* LoaderPresenter.swift in Sources */,
 				C2CC72C61F718DEC00BE590C /* ExtensionDelegate.swift in Sources */,
 				C2CC72C41F718DEC00BE590C /* InterfaceController.swift in Sources */,
 				C2CC72C81F718DEC00BE590C /* ComplicationController.swift in Sources */,
+				C2CC72DE1F71AF7400BE590C /* JsonLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +776,7 @@
 				C2CC72D01F718DEC00BE590C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2CC72D21F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +785,7 @@
 				C2CC72D41F718DEC00BE590C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2CC72D61F718DEC00BE590C /* Build configuration list for PBXNativeTarget "AulaComplication" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +794,7 @@
 				C2CC72D81F718DEC00BE590C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
