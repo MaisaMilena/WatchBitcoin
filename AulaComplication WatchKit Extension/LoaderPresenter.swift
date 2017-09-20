@@ -13,7 +13,7 @@ enum Moeda{
 }
 
 protocol LoadCotacaoPresenterDelegate{
-    func loadCotacaoConcluido(dados: Double)
+    func loadCotacaoConcluido(cotacao: Double, moeda: Moeda)
     func loadCotacaoFalhou(mensagem: String)
 }
 
@@ -47,7 +47,7 @@ class LoaderPresenter: NSObject, JsonLoaderDelegate {
     func loaderJsonConcluido(arrayDicionario: [NSDictionary]){
         let dados = tratarJson(arrayDicionario: arrayDicionario)
         // Transmite esses dados tratados para uma outra classe
-        self.delegate?.loadCotacaoConcluido(dados: dados)
+        self.delegate?.loadCotacaoConcluido(cotacao: dados, moeda: moeda)
     }
     
     func loaderJsonFalhou(mensagem: String){
@@ -62,8 +62,13 @@ class LoaderPresenter: NSObject, JsonLoaderDelegate {
         let moeda:String = {
             return self.moeda == Moeda.USD ? "USD" : "BTC"
         }()
+        print("Self moeda:",self.moeda)
+        print("Moeda local:",moeda)
         
         let valoresKey = arrayDicionario[0].object(forKey: "valores") as! NSDictionary
+        
+        print(valoresKey)
+        
         let dadosMoeda = valoresKey.object(forKey: moeda) as! NSDictionary
         let valorMoeda = dadosMoeda.object(forKey: "valor") as! NSNumber
         

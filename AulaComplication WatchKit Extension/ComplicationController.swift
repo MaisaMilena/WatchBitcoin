@@ -9,7 +9,48 @@
 import ClockKit
 
 
-class ComplicationController: NSObject, CLKComplicationDataSource {
+class ComplicationController: NSObject, CLKComplicationDataSource, LoadCotacaoPresenterDelegate {
+    
+    var loader: LoaderPresenter?
+    var cotacaoDolar: Double! = 0
+    var cotacaoBitcoin: Double! = 0
+    
+    override init(){
+        super.init()
+        loader = LoaderPresenter()
+        loader?.delegate = self
+        loader?.getCotacao(from: .USD)
+        
+
+    }
+    
+    // MARK: - Funções do Load Presenter
+    func loadCotacaoConcluido(cotacao: Double, moeda: Moeda){
+        if moeda == Moeda.USD && cotacaoDolar == 0 {
+            cotacaoDolar = cotacao
+            loader?.getCotacao(from: .BTC)
+        } else {
+            cotacaoBitcoin = cotacao
+            requestedUpdateDidBegin() //necessário após todo o carregamento para que os dados sejam atualizados na complication
+        }
+        
+        print(" 🥁 Print no Load Cotacao Concluído em Complication Controller, valor: \(cotacao), moeda: \(moeda)")
+        
+    }
+    
+    func loadCotacaoFalhou(mensagem: String){
+        print("Ocorreu um problema com a conexão com o servidor 🙁")
+    }
+
+    func requestedUpdateDidBegin() {
+        let server=CLKComplicationServer.sharedInstance()
+        for complication in server.activeComplications! {
+            server.reloadTimeline(for: complication)
+        }
+    }
+    
+    
+    
     
     // MARK: - Timeline Configuration
     
@@ -36,13 +77,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
         
-        let date = FormataData.buscaData()
         switch complication.family {
         case .modularLarge:
             let templateLarge = CLKComplicationTemplateModularLargeStandardBody()
-            templateLarge.headerTextProvider = CLKSimpleTextProvider(text: "Data atual")
-            templateLarge.body1TextProvider = CLKSimpleTextProvider(text: date)
-            templateLarge.body2TextProvider = CLKSimpleTextProvider(text: "Informação")
+            templateLarge.headerTextProvider = CLKSimpleTextProvider(text: "Cotações")
+            templateLarge.body1TextProvider = CLKSimpleTextProvider(text: "USD: \(String(cotacaoDolar))")
+            templateLarge.body2TextProvider = CLKSimpleTextProvider(text: "BTC: \(String(cotacaoBitcoin))")
             
             let entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: templateLarge)
             handler(entry)
@@ -73,11 +113,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .modularLarge:
             let templateLarge = CLKComplicationTemplateModularLargeStandardBody()
             // header
-            templateLarge.headerTextProvider = CLKSimpleTextProvider(text: "Data atual do template")
+            templateLarge.headerTextProvider = CLKSimpleTextProvider(text: "Cotação")
             // body 1
-            templateLarge.body1TextProvider = CLKSimpleTextProvider(text: "Data")
+            templateLarge.body1TextProvider = CLKSimpleTextProvider(text: "USD (dólar)")
             // body2
-            templateLarge.body2TextProvider = CLKSimpleTextProvider(text: "Informação")
+            templateLarge.body2TextProvider = CLKSimpleTextProvider(text: "BTC (bitcoin)")
             
             handler(templateLarge)
             
