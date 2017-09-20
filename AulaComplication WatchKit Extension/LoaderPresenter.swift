@@ -13,7 +13,7 @@ enum Moeda{
 }
 
 protocol LoadCotacaoPresenterDelegate{
-    func loadCotacaoConcluido(dados: String)
+    func loadCotacaoConcluido(dados: Double)
     func loadCotacaoFalhou(mensagem: String)
 }
 
@@ -23,52 +23,50 @@ class LoaderPresenter: NSObject, JsonLoaderDelegate {
     let dolarURL = "http://api.promasters.net.br/cotacao/v1/valores?moedas=USD&alt=json"
     let bitcoinURL = "http://api.promasters.net.br/cotacao/v1/valores?moedas=BTC&alt=json"
 
-    let loader = JsonLoaderDelegate()
-    let delegate : LoadCotacaoPresenterDelegate?
-    
+    let loader = JsonLoader()
+    var delegate : LoadCotacaoPresenterDelegate?
     
     var moeda: Moeda!
     
     override init() {
         super.init()
         loader.delegate = self
-        // Faz a requisição para a classe JsonLoader que chama o webservice
-        loader
         
+    }
+    
+    func getCotacao(from moeda: Moeda){
+        self.moeda = moeda
+        if moeda == Moeda.USD{
+            loader.getDados(url: dolarURL)
+        } else {
+            loader.getDados(url: bitcoinURL)
+        }
     }
     
     
     func loaderJsonConcluido(arrayDicionario: [NSDictionary]){
         let dados = tratarJson(arrayDicionario: arrayDicionario)
         // Transmite esses dados tratados para uma outra classe
-        self.delegate.loadCotacaoConcluido(dados: dados)
+        self.delegate?.loadCotacaoConcluido(dados: dados)
     }
     
     func loaderJsonFalhou(mensagem: String){
-        delegate.loadCotacaoFalhou(mensagem)
+        delegate?.loadCotacaoFalhou(mensagem: mensagem)
     }
     
-    private func tratarJson(arrayDicionario: [NSDictionary]) -> Array<String>{
-        
-        var dados = Array<NSDictionary>()
-        var valoresKey = Array<NSDictionary>()
-        
-        print("✨ Array dicionario no Presenter ✨")
+    private func tratarJson(arrayDicionario: [NSDictionary]) -> Double{
+
+        print("✨ Resposta do servidor ✨")
         print(arrayDicionario)
         
+        let moeda:String = {
+            return self.moeda == Moeda.USD ? "USD" : "BTC"
+        }()
         
+        let valoresKey = arrayDicionario[0].object(forKey: "valores") as! NSDictionary
+        let dadosMoeda = valoresKey.object(forKey: moeda) as! NSDictionary
+        let valorMoeda = dadosMoeda.object(forKey: "valor") as! NSNumber
         
-//        
-//        for dado in arrayDicionario{
-//            
-//            valoresKey = dado.object(forKey: "valores") as! Array<NSDictionary>
-//            let bpi = dado.object(forKey: "bpi")
-//            
-//            
-//            
-//           
-//        }
-        
-        return []
+        return valorMoeda as! Double
     }
 }
